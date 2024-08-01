@@ -32,6 +32,7 @@ public class Application01 {
         System.out.println(name + "은 쇼핑몰 중독이다. \n 지난달 " + name + "의 쿠팡 보너스 포인트는 " + point+ "였다.");
         point += 100;
         System.out.println(" 이번달 " + name + "의 보너스 포인트는 "+ point+ "이다.");
-
+        /*수정*/
+        System.out.println("추가");
     }
 }

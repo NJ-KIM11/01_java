@@ -24,5 +24,30 @@ public class Question {
         System.out.println(average1);
         System.out.println(average2);
         System.out.println(average3);
+
+        System.out.println("------------------------------------");
+
+        /*
+        * 사업을 시작한 홍길동은 이번 달 매출에서 부가세(10%)를 제외한 소득을 알고 싶다.
+        *
+        * 매출은 다음과 같다.
+        * 150400원
+        * 1400원
+        * 25000원
+        * 30000원
+        *
+        * 다음과 같이 출력 해주세요
+        * 홍길동의 매출은 --원 입니다.
+        * 부가세 제외 소득은 --원 이고 부가세는 --원 입니다.
+        * */
+
+        int earning = 150400 + 1400 + 25000 + 30000;
+        double tax = 0.1;
+        double hongTax = earning * tax;
+        double income = earning - hongTax;
+        System.out.println("홍길동의 매출은 " + earning +"원 입니다. \n");
+        System.out.println("부가세 제외 소득은 " + (int)income + "원 이고 부가세는 " + (int)hongTax +"원 입니다.");
+
+
     }
 }

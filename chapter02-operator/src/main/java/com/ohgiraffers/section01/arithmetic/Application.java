@@ -28,7 +28,7 @@ public class Application {
         System.out.println("num1 + num2 = " + (num1 + num2));
         //System.out.println("num1 + num2 = " + num1 - num2); //문자열은 더하기만 가능
         System.out.println("num1 + num2 = " + (num1 - num2));
-        //사칙연산 우선수위로 곱하기, 나누기, %는 우선하기 때문에 그 이후에 문자열로 바뀜
+        ////////사칙연산 우선수위로 곱하기, 나누기, %는 우선하기 때문에 그 이후에 문자열로 바뀜
         System.out.println("num1 + num2 = " + num1 * num2);
         System.out.println("num1 + num2 = " + num1 / num2);
         System.out.println("num1 + num2 = " + num1 % num2);

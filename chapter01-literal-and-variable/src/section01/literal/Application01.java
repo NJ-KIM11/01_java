@@ -22,7 +22,7 @@ public class Application01 {
         System.out.println('1');
 
         // 3. 문자열 형태의 값 출력
-        System.out.println("안녕하세요");    //문자영(문자 배열)형 리터럴
+        System.out.println("안녕하세요");    //문자열(문자 배열)형 리터럴
 
         // 4. 논리 형태의 값 출력
         System.out.println(true);

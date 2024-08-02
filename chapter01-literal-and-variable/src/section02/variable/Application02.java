@@ -65,11 +65,11 @@ public class Application02 {
         bnum = 1;
         snum = 2;
         inum = 4;
-        lnum = 4L; // long 타입은 뒤에 L명시(약속)
+        lnum = 4L; /////////////// long 타입은 뒤에 L명시(약속)
         System.out.println(lnum);
 
         // 실수를 취급하는 자료형에 값 대입
-        fnum = 4.0f; // float 타입은 끝에 f를 꼭 붙여야 사용 가능(필수)
+        fnum = 4.0f; //////////////// float 타입은 끝에 f를 꼭 붙여야 사용 가능(필수)
         dnum = 4.0;
         System.out.println(fnum);
         System.out.println(dnum);
@@ -94,8 +94,8 @@ public class Application02 {
         *  숫자로 된 형태의 값을 그대로 사용하는 자료형은
         *  byte, short, int, double 이다.
         *  일반적으로 사용하는 값을 독특한 형태가 아닌 일반적인
-        *  형태로 사용할 수 있는 자료형을 대표자료형 이라고 하며,
-        *  정수는 int, 실수는 double 이 대표 자료형이다.
+        *************  형태로 사용할 수 있는 자료형을 대표자료형 이라고 하며,
+        *************  정수는 int, 실수는 double 이 대표 자료형이다.
         * */
 
         System.out.println("bnum의 값 :" + bnum);

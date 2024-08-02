@@ -18,8 +18,8 @@ public class Application01 {
         *   3. 필요한 위치에 호출해 사용한다.
         * */
 
-        //상수는 선언시에 final 키워드를 붙인다.
-        final int AGE; //상수는 대문자로 선언 한다.
+        ////////////////상수는 선언시에 final 키워드를 붙인다.
+        final int AGE; /////////////상수는 대문자로 선언 한다.
         AGE = 10;
         //AGE = 30; //초기화 이후 상수 값은 변경할 수 없다.
         System.out.println("AGE의 값 : " +AGE);

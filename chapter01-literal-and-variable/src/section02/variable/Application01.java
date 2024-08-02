@@ -34,5 +34,6 @@ public class Application01 {
         System.out.println(" 이번달 " + name + "의 보너스 포인트는 "+ point+ "이다.");
         /*수정*/
         System.out.println("추가");
+        System.out.println(point + "점");
     }
 }

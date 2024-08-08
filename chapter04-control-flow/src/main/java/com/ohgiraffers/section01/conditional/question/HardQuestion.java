@@ -17,7 +17,11 @@ public class HardQuestion {
         for (int i = 2; i < 9; i++){
 
             pibonachiArray[i] = pibonachiArray[i-1] + pibonachiArray[i-2];
+        }
+
+        for (int i = 0; i < pibonachiArray.length ; i++) {
             System.out.println(pibonachiArray[i]);
+
         }
 
         System.out.println(pibonachiArray);

@@ -153,7 +153,6 @@ public class A_for {
         int num2 = scr.nextInt();
         int biggerNum=0;
         int smallerNum=0;
-        boolean prime = true;
 
         if(num1 == num2) {
             System.out.println("같은 숫자는 NONONO~~~~");
@@ -165,20 +164,20 @@ public class A_for {
             smallerNum = num1;
         }
 
-        for(int j = smallerNum; j <=biggerNum; j++){
-            for(int i = 2; i <j; i++) {
+        for(int j = smallerNum; j <= biggerNum; j++){
+            boolean prime = true;
+            for(int i = 2; i < j; i++) {
                 int a = j % i;
                 switch (a) {
                     case 0 : prime = false; break;
 
-
-
                 }
-
 
             }
             if (prime == true) {
                 System.out.println("소수 " + j);
+            }else if (prime == false){
+                System.out.println("이건 X " + j);
             }
         }
 

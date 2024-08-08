@@ -36,6 +36,8 @@ public class Application02 {
         // 컴퓨터는 문자를 인식하지 못하기 때문에 대응되는 숫자들이 있다
         // (아스키코드(영어), 유니코드(전세계 언어))
         System.out.println('a'+'b');
+        System.out.println("문자열" +'a'+'b');
+        System.out.println("문자열" +('a'+'b'));
         System.out.println('ㄱ'+'ㄴ');
 
         //문자열은 + 연산만 가능하다.

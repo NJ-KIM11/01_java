@@ -1,0 +1,36 @@
+package main.java.com.ohgiraffers.sectoin03.copy;
+
+public class Application02 {
+    public static void main(String[] args) {
+
+        //얕은 복사를 활용해 매개변수와 리턴값으로 활용해보자
+        String[] names = {"홍길동","유관순","이순신"};
+        System.out.println(names.hashCode());
+
+//        Application02 app = new Application02();
+        print(names);
+//        System.out.println(names[0] + names[1]);
+//        print(names);
+
+        String[] animals1 = getAnimals();
+        System.out.println("animals1.hashCode(): " + animals1.hashCode());
+        print(animals1);
+
+    }
+
+    public static void print(String[] args) {
+        System.out.println(args.hashCode());
+//        args[0] = "김준";
+
+
+        for (int i = 0; i < args.length; i++) {
+            System.out.println(args[i] + " ");
+        }
+        System.out.println();
+    }
+    public static String[] getAnimals(){
+        String[] animals = {"낙타","호랑이","나무늘보"};
+        System.out.println("animals.hashCode() = "+animals.hashCode());
+        return animals;
+    }
+}

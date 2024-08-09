@@ -27,21 +27,49 @@ public class HardQuestion {
             arr[i] = scr.nextInt();
         }
         int maxNum = arr[0];
-        int secondMaxNum = arr[0];
+        int secondMaxNum = 0;
         int index =0;
 
-        for (int i = 0; i < arrLength ; i++) {
+        for (int i = 1; i < arrLength ; i++) {
 
             if(maxNum < arr[i] ) {
                 maxNum = arr[i];
             }
-            if(maxNum == arr[i]) {
+            /*if(maxNum == secondMaxNum) {
                 continue;
             }
             if(secondMaxNum < maxNum && secondMaxNum < arr[i]) {
                 secondMaxNum = arr[i];
-            }
+            }*/
+            /*else if(maxNum == arr[i]) {
+                continue;
+            }*//* else if (maxNum > arr[i]) {
+                secondMaxNum = arr[i];
+            }*/
+
+            /*if(secondMaxNum < maxNum && secondMaxNum < arr[i]) {
+                secondMaxNum = arr[i];
+            }*/
         }
+        for (int i = 0; i < arrLength; i++) {
+            if(secondMaxNum < maxNum && secondMaxNum < arr[i] && maxNum != arr[i]) {
+                secondMaxNum = arr[i];
+            }
+
+        }
+
+        /*for (int i = 0; i < arrLength; i++) {
+
+            if(maxNum == secondMaxNum) {
+                secondMaxNum = 0;
+            }
+
+            if(secondMaxNum < maxNum && secondMaxNum < arr[i]) {
+                secondMaxNum = arr[i];
+            }
+
+
+        }*/
 
         System.out.println("배열에서 가장 큰 값은 : " + maxNum);
         System.out.println("배열에서 두번째로 큰 값은 : " + secondMaxNum);

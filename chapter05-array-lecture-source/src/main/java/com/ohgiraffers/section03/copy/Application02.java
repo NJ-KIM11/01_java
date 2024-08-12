@@ -1,4 +1,4 @@
-package main.java.com.ohgiraffers.sectoin03.copy;
+package main.java.com.ohgiraffers.section03.copy;
 
 public class Application02 {
     public static void main(String[] args) {

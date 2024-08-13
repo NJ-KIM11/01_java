@@ -12,6 +12,7 @@ public class LoginRepository {  //회원 가입 처리, 로그인 처리
     public static boolean db(User user) {
         if(count != 10) {
             usersDb[count++] = user;
+            System.out.println("회원 가입 완료");
         } else {
             System.out.println("회원 정원 초과");
             return false;
@@ -19,16 +20,16 @@ public class LoginRepository {  //회원 가입 처리, 로그인 처리
         return true;
     }
 
-    public boolean loginCheck(String id, String pwd) {
+    public static boolean loginCheck(User signingInUser) {
         if (usersDb[0] == null){
             System.out.println("가입된 회원이 없습니다.");
             return false;
         }
         for(User user : usersDb) {
-            if(user.getId().equals(id) && user.getPwd().equals(pwd)) {
+            if(user.getId().equals(signingInUser.getId()) && user.getPwd().equals(signingInUser.getPwd())) {
                 System.out.println("id check, pwd check --> 로그인 성공");
                 return true;
-            }
+            }//db가 꽉 안차있으면 에러 발생 user를 읽지 못하고 null 이라고한다???
         }
         System.out.println("DB에 맞는 id와 pwd가 없습니다. \n회원가입 먼저 하세요~~~");
         return false;

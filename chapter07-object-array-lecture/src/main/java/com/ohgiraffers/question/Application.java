@@ -15,6 +15,7 @@ public class Application {  //실행부
         LoginService loginService = new LoginService();
 
         loop :while(true){
+
             System.out.println("=============회원가입 및 로그인 시스템===============");
             System.out.println("1. 회원가입");
             System.out.println("2. 로그인");
@@ -24,7 +25,7 @@ public class Application {  //실행부
 
             switch(no){
                 case 1: loginService.signUpUsers();break;
-                case 2: loginService.login();break;
+                case 2: loginService.logIn();break;
                 case 9:break loop;
                 default:
                     System.out.println("잘못된 번호 입니다."); break;

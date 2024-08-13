@@ -3,10 +3,7 @@ package main.java.com.ohgiraffers.question;
 import java.util.Scanner;
 
 public class LoginService { //회원가입, 로그인 메소드 처리
-    private String id;
-    private String name;
-    private String pwd;
-    private String pwdAgain;
+
     Scanner scr = new Scanner(System.in);
 
     public void signUpUsers(){
@@ -17,23 +14,22 @@ public class LoginService { //회원가입, 로그인 메소드 처리
         sloop : while(true){
             System.out.println("----------회원 가입 시작----------");
             System.out.println("아이디 : ");
-            id = scr.nextLine();
+            user.setId(scr.nextLine());
             System.out.println("이름 : ");
-            name = scr.nextLine();
+            user.setName(scr.nextLine());
             System.out.println("비밀번호 : ");
-            pwd = scr.nextLine();
+            user.setPwd(scr.nextLine());
             System.out.println("비밀번호 확인 : ");
-            pwdAgain = scr.nextLine();
+            user.setPwdAgain(scr.nextLine());
 
-            if(pwd.equals(pwdAgain)){
-                user = new User(id, name, pwd);
-                System.out.println("---회원 가입 완료---"); break sloop;
+            if(user.getPwd().equals(user.getPwdAgain())){
+                break sloop;
             } else {
                 System.out.println("비밀번호와 비밀번호 확인이 같지 않습니다. ");
             }
         }
-        LoginRepository loginRepository = new LoginRepository();
-        if (loginRepository.db(user)){
+
+        if (LoginRepository.db(user)){
             System.out.println(user + "님의 정보가 db에 추가 되었습니다.");
         } else {
             System.out.println("회원가입 불가");
@@ -41,23 +37,21 @@ public class LoginService { //회원가입, 로그인 메소드 처리
 
     }
 
-    public void login(){
+    public void logIn(){
+        User user = new User();
         System.out.println("----------로그인 시작----------");
         System.out.println("아이디 : ");
-        id = scr.nextLine();
+        user.setId(scr.nextLine());
         System.out.println("비밀번호 : ");
-        pwd = scr.nextLine();
+        user.setPwd(scr.nextLine());
 
-//        User user = new User(id, pwd);
-        LoginRepository loginRepository = new LoginRepository();
-        if(loginRepository.loginCheck(id,pwd)){
+        if(LoginRepository.loginCheck(user)){
             System.out.println("로그인 완료!!");
             return;
         } else {
-            System.out.println("가입한 회원이 없습니다.");
-
+            System.out.println("회원 가입 먼저 해주세요~");
+            return;
         }
-
 
     }
 

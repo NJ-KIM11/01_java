@@ -28,7 +28,7 @@ public class Monster {
         }
     }
 
-    public String gerInfo(){
+    public String getInfo(){
         return "몬스터의 종류는 " + kind + " 이고, 체력은 " + hp + " 입니다.";
     }
 }

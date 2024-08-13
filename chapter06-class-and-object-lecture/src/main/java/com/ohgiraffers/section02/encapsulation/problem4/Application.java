@@ -13,7 +13,7 @@ public class Application {
         monster1.setKind("프랑켄");
         monster1.setHp(200);
 
-        System.out.println(monster1.gerInfo());
+        System.out.println(monster1.getInfo());
 
         /*
         * 캡슐화는 유지보수성을 증가시키기 위해 필드의 직접 접근을 제한하고

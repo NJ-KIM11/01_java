@@ -40,7 +40,7 @@ public class Application {
     /*
     * 1. main 메소드 실행 --> project 내에 모든 static 객체 메모리 할당
     * 2. Application 클래스 실행 --> while 문 --> scanner 입력 받음
-    * 3. 1번실행시 --> MemberService 클래스의 signUpMembers 메소드 실행 -->
-    * 4. 필드들을 매개변수로 가지는 객체들을  Member 배열
+    * 3. 1번 입력시 --> MemberService 클래스의 signUpMembers 메소드 실행 -->
+    * 4. Member 객체 배열 생성  --> 필드들을 매개변수로 가지는 객체들을 생성 -->
     * */
 }

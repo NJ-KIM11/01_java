@@ -37,7 +37,7 @@ public class LoginService { //회원가입, 로그인 메소드 처리
 
     }
 
-    public void logIn(){
+    public boolean logIn(){
         User user = new User();
         System.out.println("----------로그인 시작----------");
         System.out.println("아이디 : ");
@@ -47,10 +47,10 @@ public class LoginService { //회원가입, 로그인 메소드 처리
 
         if(LoginRepository.loginCheck(user)){
             System.out.println("로그인 완료!!");
-            return;
+            return false;
         } else {
             System.out.println("회원 가입 먼저 해주세요~");
-            return;
+            return true;
         }
 
     }

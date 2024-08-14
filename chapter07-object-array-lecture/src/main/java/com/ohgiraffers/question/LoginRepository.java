@@ -25,12 +25,19 @@ public class LoginRepository {  //회원 가입 처리, 로그인 처리
             System.out.println("가입된 회원이 없습니다.");
             return false;
         }
-        for(User user : usersDb) {
+        for (int i = 0; i < count; i++) {
+            if (usersDb[i].getId().equals(signingInUser.getId()) && usersDb[i].getPwd().equals(signingInUser.getPwd())){
+                System.out.println("id check, pwd check --> 로그인 성공");
+                return true;
+            }
+        }
+
+        /*for(User user : usersDb) {
             if(user.getId().equals(signingInUser.getId()) && user.getPwd().equals(signingInUser.getPwd())) {
                 System.out.println("id check, pwd check --> 로그인 성공");
                 return true;
             }//db가 꽉 안차있으면 에러 발생 user를 읽지 못하고 null 이라고한다???
-        }
+        }*/
         System.out.println("DB에 맞는 id와 pwd가 없습니다. \n회원가입 먼저 하세요~~~");
         return false;
     }

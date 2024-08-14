@@ -13,8 +13,9 @@ public class Application {  //실행부
 
         Scanner scr = new Scanner(System.in);
         LoginService loginService = new LoginService();
+        boolean isTrue = true;
 
-        loop :while(true){
+        loop :while(isTrue){
 
             System.out.println("=============회원가입 및 로그인 시스템===============");
             System.out.println("1. 회원가입");
@@ -25,7 +26,7 @@ public class Application {  //실행부
 
             switch(no){
                 case 1: loginService.signUpUsers();break;
-                case 2: loginService.logIn();break;
+                case 2: isTrue = loginService.logIn();break;
                 case 9:break loop;
                 default:
                     System.out.println("잘못된 번호 입니다."); break;

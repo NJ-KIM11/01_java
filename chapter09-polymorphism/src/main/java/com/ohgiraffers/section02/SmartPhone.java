@@ -9,6 +9,7 @@ public class SmartPhone extends Product {
         System.out.println("Product 클래스의 추상메소드를 호출함");
     }
 
+
     public void printSmartPhone(){
         System.out.println("smartPhone 의 print 메소드를 호출함");
     }

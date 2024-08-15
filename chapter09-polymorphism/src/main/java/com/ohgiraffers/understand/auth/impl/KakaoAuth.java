@@ -1,4 +1,12 @@
 package main.java.com.ohgiraffers.understand.auth.impl;
 
-public class KakaoAuth {
+import main.java.com.ohgiraffers.understand.auth.SnsAuth;
+import main.java.com.ohgiraffers.understand.service.MemberService;
+
+public class KakaoAuth extends MemberService implements SnsAuth {
+
+    @Override
+    public void auth() {
+
+    }
 }

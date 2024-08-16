@@ -5,6 +5,7 @@ public class Dicer {
     private int currentPosition;
 
     public void move(int diceNumber){
+
         this.currentPosition += diceNumber;
     }
 

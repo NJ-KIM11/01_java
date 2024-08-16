@@ -4,9 +4,11 @@ public abstract class Product {
 
     private int nonStaticField;
     private static int staticField;
+    //static, nonstatic 필드 선언 가능
 
-    public Product(){
-    }
+    public Product(){}
+    //기본 생성자 선언 가능
+
     public void nonStaticMethod(){
         System.out.println("Product 클래스의 nonStaticMethod 를 호출함");
     }

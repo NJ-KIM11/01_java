@@ -6,6 +6,7 @@ public class Application02 {
         //얕은 복사를 활용해 매개변수와 리턴값으로 활용해보자
         String[] names = {"홍길동","유관순","이순신"};
         System.out.println(names.hashCode());
+        System.out.println(names[0]);
 
 //        Application02 app = new Application02();
         print(names);
@@ -20,7 +21,7 @@ public class Application02 {
 
     public static void print(String[] args) {
         System.out.println(args.hashCode());
-//        args[0] = "김준";
+        args[0] = "김준";
 
 
         for (int i = 0; i < args.length; i++) {

@@ -38,7 +38,7 @@ public class Application {
         r1.calcRound();
 
 
-        //가변인자
+        ///////////가변인자
         //인자로 전달하는 값의 갯수가 정해지지 않은 경우 가변배열을 활용할 수 있다.
         pt.testVariableLengthArrayParameter("홍길동");
         pt.testVariableLengthArrayParameter("유관순", "볼링");

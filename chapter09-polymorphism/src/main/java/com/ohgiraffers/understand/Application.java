@@ -14,45 +14,38 @@ public class Application {
 
         Scanner scr = new Scanner(System.in);
         MemberService memberService = new MemberService();
-        SnsAuth snsAuthG = new GoogleAuth();
+        /*SnsAuth snsAuthG = new GoogleAuth();
         SnsAuth snsAuthK = new KakaoAuth();
         SnsAuth snsAuthN = new NaverAuth();
-        MemberDTO memberDTO = new MemberDTO();
+        MemberDTO memberDTO = new MemberDTO();*/
 
         while (true) {
             System.out.println("=============== 로그인 및 회원가입 =================");
             System.out.println("1. 로그인");
             System.out.println("2. 회원가입");
 
-            int firstChoiceNum = scr.nextInt();
-            switch (firstChoiceNum) {
-                case 1:
+            int no = scr.nextInt();
+            switch (no) {
+                case 1 :
                     while (true) {
                         System.out.println("=========== 인증 방식 선택 ==========");
                         System.out.println("1. Google 인증");
                         System.out.println("2. Kakao 인증");
                         System.out.println("3. Naver 인증");
 
-                        int secondChoiceNum = scr.nextInt();
+                        int authNum1 = scr.nextInt();
                         scr.nextLine();
+                        memberService.login(authNum1);
+                    }
+                case 2 :
+                    System.out.println("=========== 회원 가입 방식 선택 ==========");
+                    System.out.println("1. Google 인증");
+                    System.out.println("2. Kakao 인증");
+                    System.out.println("3. Naver 인증");
 
-                        System.out.println("==========로그인========");
-                        System.out.println("아이디 입력 : ");
-                        memberDTO.setId(scr.nextLine());
-                        System.out.println("비밀번호 입력 : ");
-                        memberDTO.setPwd(scr.nextLine());
-
-                        switch(secondChoiceNum){
-                            case 1 :
-                                ((GoogleAuth)snsAuthG).loginCheck(memberDTO, secondChoiceNum);
-                            case 2 :
-                                ((KakaoAuth)snsAuthK).loginCheck(memberDTO, secondChoiceNum);
-                            case 3 :
-                                ((NaverAuth)snsAuthN).loginCheck(memberDTO, secondChoiceNum);
-
-                            }
-
-                        }
+                    int authNum2 = scr.nextInt();
+                    scr.nextLine();
+                    memberService.signUp(authNum2);
 
             }
 

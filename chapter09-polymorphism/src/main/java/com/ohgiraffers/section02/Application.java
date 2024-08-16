@@ -45,7 +45,7 @@ public class Application {
         product.nonStaticMethod();
 
         //static 메소드
-        Product.staticMethod();
+        product.staticMethod();
 
         /*
         * 추상클래스를 왜 쓰나?

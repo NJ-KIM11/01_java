@@ -6,7 +6,8 @@ public interface SnsAuth {
 
 //    MemberDTO[][] membersDb = new MemberDTO[3][];
 
-    void auth();
+    void loginAuth(MemberDTO memberDTO);
+    void signupAuth(MemberDTO memberDTO);
 
     /*static void loginCheck(MemberDTO memberDTO, int authNum) {
         int dbArrayNum = authNum - 1;

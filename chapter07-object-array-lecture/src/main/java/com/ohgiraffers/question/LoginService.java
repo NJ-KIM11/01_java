@@ -37,6 +37,7 @@ public class LoginService { //회원가입, 로그인 메소드 처리
 
     }
 
+
     public boolean logIn(){
         User user = new User();
         System.out.println("----------로그인 시작----------");

@@ -8,7 +8,7 @@ public class Lotto {
     public TreeSet lottoCreator(){
         TreeSet <Integer> lottoSet = new TreeSet<Integer>();
         while(lottoSet.size() < 6){
-            lottoSet.add((int)(Math.random()*45) + 1);
+            lottoSet.add((int)(Math.random()*7) + 1);
         }
         return lottoSet;
     }

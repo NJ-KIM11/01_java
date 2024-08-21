@@ -29,7 +29,7 @@ public class BankSystemApplication {
                         bankAccount.deposit(scr.nextInt());
                         scr.nextLine();
                     }catch (Exception e) {
-                        System.out.println(e.getMessage());
+                        e.printStackTrace();
                     }finally {
                         bankAccount.balanceStatement();
                     }
@@ -41,7 +41,7 @@ public class BankSystemApplication {
                         bankAccount.withdraw(scr.nextInt());
                         scr.nextLine();
                     }catch (Exception e) {
-                        System.out.println(e.getMessage());
+                        e.printStackTrace();
                     }finally {
                         bankAccount.balanceStatement();
                     }

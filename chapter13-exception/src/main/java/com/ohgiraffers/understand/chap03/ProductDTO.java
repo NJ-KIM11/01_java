@@ -45,6 +45,6 @@ public class ProductDTO {
                 "productName='" + productName + '\'' +
                 ", productPrice=" + productPrice +
                 ", productQuantity=" + productQuantity +
-                '}';
+                "}\n";
     }
 }

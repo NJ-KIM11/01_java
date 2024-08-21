@@ -46,7 +46,7 @@ public class MovieTheaterSystemApplication {
             try{
                 movieTheater.bookSeat(movieChoiceTitle, numOfBooking);
             }catch (Exception e){
-                System.out.println(e.getMessage());
+                e.printStackTrace();
             }
 
         }

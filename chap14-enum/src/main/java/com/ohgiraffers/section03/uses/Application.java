@@ -17,7 +17,8 @@ public class Application {
         System.out.println(producer.name() + " " + producer.getDescription());
 
         //인스턴스는 싱글톤으로 관리되기 때문에 동일비교 연산이 가능하다.
-        System.out.println(consumer == UserRole2.CONSUMER);
+        System.out.println(consumer == (UserRole2.CONSUMER));
+        System.out.println(consumer.name().equals("consumer"));
 
         System.out.println("=======================================");
 
